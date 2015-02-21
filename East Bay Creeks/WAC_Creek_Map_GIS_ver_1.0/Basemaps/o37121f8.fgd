@@ -1,0 +1,246 @@
+Identification_Information:
+ Citation:
+  Citation_Information:
+   Originator: Beartooth Mapping, Inc.
+   Publication_Date: 20000410
+   Title: Dublin (o37121f8) Enhanced Digital Raster Graphic
+   Geospatial_Data_Presentation_Form: Map
+   Publication_Information:
+    Publication_Place: Red Lodge, MT
+    Publisher: Beartooth Mapping, Inc.
+
+ Description:
+  Abstract:  The Digital Raster Graphic (DRG) is a scanned image of a US Geological
+    Survey (USGS) standard series topographic map that includes all collar information 
+    (e.g., legend, scale bar, index map, etc.) The DRGE is a non-proprietary product
+    of a USGS DRG in which the map collar information has been removed.
+  Purpose: The DRGE is useful as a source or background layer in a GIS, as a means to 
+     perform quality assurance on other digital products, and as a source for the 
+     collection and revision of DLG data.  The DRGE can also be merged with other 
+     digital data, e.g. DEM's or DOQ's, to produce a hybrid digital file. The removal 
+     of the collar information allows the DRGE to be edge-matched and displayed 
+     simultaneously in a Geographic Information System. 
+
+ Time_Period_of_Content:
+  Time_Period_Information:  
+   Single_Date/Time:  
+    Calendar_Date: 1980
+  Currentness_Reference: Source Map
+
+ Status:
+  Progress: Complete
+  Maintenance_and_Update_Frequency: None Planned
+ 
+ Spatial_Domain:
+  Bounding_Coordinates:
+   West_Bounding_Coordinate: 122.002
+   East_Bounding_Coordinate: 121.873
+   North_Bounding_Coordinate: 37.75113
+   South_Bounding_Coordinate: 37.62387
+
+ Keywords: 
+  Theme:
+   Theme_Keyword_Thesaurus: None
+   Theme_Keyword: Digital Raster Graphic
+   Theme_Keyword: DRG
+   Theme_Keyword: Topographic Map
+      
+  Place:
+   Place_Keyword_Thesaurus: None
+   Place_Keyword: United States
+   Place_Keyword: CA
+      
+ Access_Constraints: None
+
+ Use_Constraints: Should not be used at scales greater than 1:24000. These data were 
+     initially developed by the USGS and enhanced by Beartooth Mapping Inc. Please 
+     acknowledge Beartooth Mapping Inc. and the USGS in products derived from these data.
+
+ Point_of_Contact:
+  Contact_Information:
+   Contact_Organization_Primary:
+    Contact_Organization: Beartooth Mapping, Inc.
+   Contact_Address: 
+    Address_Type: Mailing
+    Address: PO Box 2075
+    City: Red Lodge
+    State_or_Province: MT
+    Postal_Code: 59068
+    Country: USA
+   Contact_Voice_Telephone: (406) 446-1007
+   Contact_Electronic_Mail_Address: www.Beartoothmaps.com
+
+ Data_Set_Credit: The original DRG was produced through an Innovative Partnership 
+     agreement between The Land Information Technology Company, Ltd., of Aurora, 
+     CO and the USGS.
+
+Data_Quality_Information:
+ Attribute_Accuracy:
+  Attribute_Accuracy_Report: The DRGE is an 8-bit color image that employs a
+     color palette to ensure uniform colors throughout a particular DRG series. 
+     All DRG's within a series must have the same RGB value.
+
+ Logical_Consistency_Report: N/A
+
+ Completeness_Report: According to the USGS, the DRG is a faithfully reproduced 
+     digital image of the original source map.  Some differences may be detected 
+     between the source graphic used and the DRG due to the RGB values assigned 
+     that particular color.  The intent is to recreate those colors as near as 
+     possible.  Data completeness for DRG files reflect content of the source graphic.
+     Features may have been eliminated or generalized on the source graphic due to 
+     scale and legibility constraints. 
+
+ Positional_Accuracy:
+  Horizontal_Positional_Accuracy:
+   Horizontal_Positional_Accuracy_Report: The datum of the published map is retained to be
+     consistent with other USGS digital data.
+  Vertical_Positional_Accuracy:
+   Vertical_Positional_Accuracy_Report: N/A
+
+ Lineage:
+  Source_Information:
+   Source_Citation:
+    Citation_Information:
+     Title: Digital Raster Graphic for Dublin
+     Originator: USGS
+     Publication_Date: 19960101
+   Source_Scale_Denominator: 24000
+   Type_of_Source_Media: Paper
+   Source_Time_Period_of_Content:
+    Time_Period_Information:
+     Single_Date/Time:
+      Calendar_Date: 1980
+    Source_Currentness_Reference: Ground Condition
+   Source_Citation_Abbreviation: DRG
+   Source_Contribution: The source map was scanned to produce the DRG. USGS DRG 
+     production specifications are available on request from the National 
+     Mapping Division and Mid-Continent Mapping Center by contacting:
+      Rolla-ESIC
+      U.S.Geological Survey
+      1400 Independence Rd., MS231
+      Rolla, MO 65401-2602
+      Phone (573)308-3500
+      Facsimile (573)308-3615
+      E-mail to mcmcesic@usgs.gov
+      World Wide Web: http://mcmcweb.er.usgs.gov/drg/
+
+  Process_Step:
+   Process_Description: The DRG imagery was processed using the Spatial Analyst 
+     Extension to ArcView 3.1 (ESRI, Inc). The map collar was removed and portions of 
+     adjacent quadrangles were appended to the input image to produce a UTM rectangle 
+     output. DRGE images from the same map series (large, intermediate, and small scale)
+     were processed by UTM zone to produce seamless output imagery within each Zone.
+   Process_Date: 20000410
+
+  Process_Step:
+   Process_Description: The output ArcView Grid was converted to a TIFF 6.0 / GeoTIFF
+     1.0 image using the GridIO API (ESRI, Inc.),  LibTiff Library (Copyright 1988-1998 
+     Sam Leffler, 1991-1998 Silicon Graphics, Inc) and LibGeoTiff Library.
+   Process_Date: 20000410
+
+Spatial_Data_Organization_Information:
+ Direct_Spatial_Reference_Method: Raster
+ Raster_Object_Information:
+  Raster_Object_Type: Pixel
+  Row_Count: 5739
+  Column_Count: 4585
+
+Spatial_Reference_Information:
+ Horizontal_Coordinate_System_Definition:
+  Planar:
+   Grid_Coordinate_System:
+    Grid_Coordinate_System_Name: Universal Transverse Mercator
+    Universal_Transverse_Mercator:
+     UTM_Zone_Number: 10
+     Transverse_Mercator:
+      Scale_Factor_at_Central_Meridian: 0.9996     
+      Longitude_of_Central_Meridian: -123
+      Latitude_of_Projection_Origin: 0.0
+      False_Easting: 500000
+      False_Northing: 0
+   Planar_Coordinate_Information:
+    Planar_Coordinate_Encoding_Method: Row and column
+    Coordinate_Representation: 
+     Abscissa_Resolution: 2.4384
+     Ordinate_Resolution: 2.4384
+    Planar_Distance_Units: Meters 
+  Geodetic_Model:
+   Horizontal_Datum_Name: North American Datum of 1927
+   Ellipsoid_Name: Clarke 1866
+   Semi-major_Axis: 6378206.4
+   Denominator_of_Flattening_Ratio: 294.98
+
+Entity_and_Attribute_Information:
+ Overview_Description:
+  Entity_and_Attribute_Overview: Each raster entity or pixel contains a color 
+    index from 0 through 12 referencing a color palette of RGB values from 
+    0 through 255 in which the standard colors used in the DRGE are defined.
+
+                           DRGE Color Palette
+
+            Digital Number    Color       Red      Green    Blue
+
+                  0           Black       0        0        0
+                  1           White       255      255      255
+                  2           Blue        0        151      164
+                  3           Red         203      0        23
+                  4           Brown       131      66       37
+                  5           Green       201      234      157
+                  6           Purple      137      51       128
+                  7           Yellow      255      234      0
+                  8        Light Blue     167      226      226
+                  9        Light Red      255      184      184
+                  10       Light Purple   218      179      214
+                  11       Light Grey     209      209      209
+                  12       Light Brown    207      164      142
+
+  Entity_and_Attribute_Detail_Citation: None.
+
+Distribution_Information: 
+ Distributor:
+  Contact_Information:
+   Contact_Organization_Primary:
+    Contact_Organization: Beartooth Mapping, Inc.
+   Contact_Address:
+    Address_Type: Mailing
+    Address: PO Box 2075
+    City: Red Lodge
+    State_or_Province: MT 
+    Postal_Code: 59068
+    Country: USA
+   Contact_Voice_Telephone: (406) 446-1007
+   Contact_Electronic_Mail_Address: www.Beartoothmaps.com
+ Distribution_Liability: Although these data have been processed successfully on a 
+   computer system at Beartooth Mapping Inc., no warranty expressed or implied is 
+   made by Beartooth Mapping Inc. regarding the use of the data on any other system,
+   nor does the act of distribution constitute any such warranty.
+
+ Standard_Order_Process:  
+  Digital_Form:  
+   Digital_Transfer_Information:  
+    Format_Name: Tiff
+    Format_Version_Number:  6.0
+    File_Decompression_Technique: Packbits
+   Digital_Transfer_Option:  
+    Offline_Option:  
+     Offline_Media: CD-ROM
+     Recording_Format: ISO 9660 Level 1, Mode 1.
+  Fees: Contact Beartooth Mapping, Inc for fee information.
+
+Metadata_Reference_Information:
+ Metadata_Date: 20000410
+ Metadata_Contact:
+  Contact_Information:
+   Contact_Person_Primary:
+    Contact_Person: Kevin R. Toohill
+   Contact_Address:
+    Address_Type: Mailing
+    Address: PO Box 2075
+    City: Red Lodge
+    State_or_Province: MT
+    Postal_Code: 59068
+    Country: USA
+   Contact_Voice_Telephone: (406) 446-1007
+   Contact_Electronic_Mail_Address: toohill@Beartoothmaps.com
+ Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+ Metadata_Standard_Version: FGDC-STD-001-1998

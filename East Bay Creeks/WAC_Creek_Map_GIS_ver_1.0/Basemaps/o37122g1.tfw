@@ -1,0 +1,15 @@
+2.43840000000000
+0.00000000000000
+0.00000000000000
+-2.43840000000000
+576859.44726551010000
+4192408.27182651820000
+/* 26910
+/* UTM Zone 10 N with NAD83
+/* Map Name: Las Trampas Ridge
+/* Map Date: 1999
+/* Map Scale: 24000
+/* Produced 20020607 by Beartooth Mapping, Inc.
+/* This world file shifts the upper left image coordinate to the corresponding
+/* NAD83 location, resulting in an approximated NAD83 image. Coordinate error
+/* increases away from the upper left coordinate.

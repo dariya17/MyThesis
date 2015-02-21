@@ -1,0 +1,14 @@
+2.43840000000000
+0.00000000000000
+0.00000000000000
+-2.43840000000000
+588001.36648538744000
+4178664.76462999450000
+/* UTM Zone 10 N with NAD83
+/* This world file shifts the upper left image coordinate to the corresponding
+/* NAD83 location, resulting in an approximated NAD83 image. Coordinate error
+/* increases away from the upper left coordinate.
+/* Map Name: Dublin
+/* Map Date: 1980
+/* Map Scale: 24000
+/* Produced 20000410 by Beartooth Mapping, Inc.
