@@ -1,0 +1,353 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- Version 2003.08.15 -->
+<head>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<script type="text/javascript" src="/scripts/elcontent.js"></script>
+<script type="text/javascript" src="/scripts/common.js"></script>
+<script type="text/javascript" src="/scripts/features.js"></script>
+<title>JPLL InvestiGator Catalog</title>
+<meta http-equiv="Content-Type" content="text/html" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="/screens/jpll_and_webpac.css" type="TEXT/CSS" />
+<script type="text/javascript">
+
+ /**
+         * Simple function to detect if the user has a mobile device
+         * http://www.russellbeattie.com/blog/mobile-browser-detection-in-php
+         */
+        
+        function isMobileDevice()
+        {
+                var isMobile = false;
+                //var op = toLowerCase(this->getServer('HTTP_X_OPERAMINI_PHONE'));
+                var uagent = navigator.userAgent.toLowerCase();
+                //var ac = toLowerCase(this->getServer('HTTP_ACCEPT'));
+                
+                // custom ipad check
+                if (uagent.search('ipad') > -1)
+				  isMobile = true;
+			   
+                //if (strpos(ua, 'ipad')) return false;
+                
+                // others
+                if (uagent.search('sony') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('symbian') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('nokia') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('samsung') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('mobile') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('windows ce') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('epoc') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('opera mini') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('nitro') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('j2me') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('midp-') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('cldc-') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('netfront') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('mot') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('up.browser') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('up.link') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('audiovox') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('blackberry') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('ericsson,') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('panasonic') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('philips') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('sanyo') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('sharp') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('sie-') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('portalmmm') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('blazer') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('avantgo') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('danger') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('palm') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('series60') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('palmsource') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('pocketpc') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('smartphone') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('rover') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('ipaq') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('au-mic,') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('alcatel') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('ericy') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('up.link') > -1)
+				  isMobile = true;
+			  
+                if (uagent.search('vodafone/') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('wap1.') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('wap2.') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('maemo browser') > -1)
+				  isMobile = true;
+			   
+                if (uagent.search('sony') > -1)
+				  isMobile = true;
+			   
+                        
+                return isMobile;               
+        }
+function mobiletrue()
+	{
+	if (isMobileDevice()==true)
+		{
+		//document.write(isMobileDevice());
+		var a = document.getElementsByTagName('span');
+		//document.write(a.length);
+		for (var i=0;i<a.length;i++) 
+			{
+			if (a[i].className=="mobilehide")
+				{
+				a[i].style.display="none";
+				}
+			}
+		var b = document.getElementsByTagName('input');
+		//document.write(a.length);
+		for (var i=0;i<b.length;i++) 
+			{
+			if (b[i].value!="submit")
+				{
+				b[i].size=20;
+				b[i].maxLength=20;
+				}
+			}
+		}
+	}
+function headermobile()
+	{
+	if (isMobileDevice()==true)
+		{
+		document.write('<div style="padding:1em 0 0.5em 0.5em; background-color:#414141; border-bottom:5px solid #fff378;">
+');
+		document.write('<h1><a href="http://m.library.sfsu.edu">Leonard Library Mobile</a></h1>');
+		document.write('</div>');
+		}
+	}
+</script>
+
+</head>
+
+<body onLoad="document.forms[0].elements[0].focus();">
+<!--Begin the top logo table-->
+<!--TIP: this data should match the data used by the TOPLOGO web option-->
+<!--You will need to make any changes to all static HTML pages and to toplogo.html.-->
+<!--The Web server will need to be restarted for changes to toplogo.html to take effect.-->
+<span class="mobilehide">
+<html   dir="LTR">
+<head>
+<title>J. Paul Leonard Library                                          /All Locations</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js"></script>
+
+<script type="text/javascript" src="/scripts/features.js"></script>
+
+<script type="text/javascript" src="/scripts/elcontent.js"></script>
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(6000000, "/");
+// -->
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="6000;URL=/" />
+</noscript>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!--[if lte IE 8]><link rel="stylesheet" media="screen" type="text/css" href="/screens/ie_styles.css" /><link rel="stylesheet" media="print" type="text/css" href="/screens/printVer.css" /><![endif]-->
+</head>
+<body bgcolor="#FFFFFF" onLoad='if (document.forms.length > 0) { for (var i=0; i<document.forms[0].elements.length; i++) { if (document.forms[0].elements[i].type == "text") { document.forms[0].elements[i].focus(); document.forms[0].elements[i].select(); return; } } }'>
+<!-- begin jpll header -->
+<div style="padding:1em 0 0.5em 0.5em; background-color:#414141; border-bottom:5px solid #fff378;">
+<a href="/" style="border-bottom:0;"><img src="/screens/InvestiGator_logo.gif" border="0"></a><a href="http://www.library.sfsu.edu/" style="border-bottom:0;"><img src="/screens/InvestiGator_JPLLlogo.gif" border="0"></a>
+</div>
+<div class="jpllnav" style="padding:4px 22px 4px 22px; margin-bottom:20px;">
+<span class="fright">
+<a href="http://www.library.sfsu.edu/docs/micro.php">Microform Request</a>
+&#160;|&#160;
+<a href="http://www.library.sfsu.edu/find/dbs/dbselector.php">Databases</a>
+&#160;|&#160;<a href="http://library.sfsu.edu/redirect/eres.php">EReserves</a>
+&#160;|&#160;<a href="http://illiad.sfsu.edu/illiad/logon.html">ILLiad</a>
+&#160;|&#160;<a href="http://csul.iii.com/">LINK+</a>
+</span><span class="fleft"><a href="/search/">New Search</a>
+&#160;|&#160;<a href="/patroninfo">Library Account</a>
+&#160;|&#160;<a href="/acquire">Suggest a Purchase</a>
+&#160;|&#160;<a href="http://www.library.sfsu.edu/about/staff/staffselector.php?qGuide=Y">Quick Contacts</a>
+&#160;|&#160;<a href="/screens/help_index.html">Help</a></span>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39985677-1', 'sfsu.edu');
+  ga('send', 'pageview');
+
+</script>
+<!-- end jpll header -->
+
+<br />
+</span>
+<script type="text/javascript">
+mobiletrue();
+headermobile();
+</script>
+
+<!--End the top logo table-->
+
+<br />
+
+<!--Begin the main content table-->
+<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
+<tr valign="top" class="pageMainArea">
+<td class="pageMainArea">&nbsp;
+<!--Beginning main page content-->
+
+<span class="pageMainAreaHeader">Web Access Management Login</span>
+<br />
+<form method="post">
+<table width="100%">
+<tr><td width="30%"></td><td>
+</td></tr><tr><td>
+Your Name:</td><td>
+<input name="name" id="name" value="" size="20" maxlength="40"></td></tr>
+<tr><td></td><td>
+Enter the University ID number from your OneCard</td></tr>
+<tr><td>
+<label for="code">SFSU ID Number</label></td><td>
+<input name="code" id="code" type="PASSWORD" value="" size="20" maxlength="40"></td></tr>
+<tr><td></td><td>
+First timers: choose a 4 to 6 digit number; enter twice on next screen</td></tr><tr><td>
+<label for="pin">Enter your PIN:</label></td><td>
+<input name="pin" id="pin" type="PASSWORD" value="" size="20" maxlength="40"></td></tr>
+</table>
+<br /><br />
+<div  class="formButtonArea"><input type="image" src="/screens/pat_submit.gif" border="0" name="submit" value="submit" /></div>
+</form>
+<a href="http://opac.sfsu.edu:80/"><img src="/screens/startover.gif" alt="Start Over" border="0" /></a>
+
+<!--End of main page content-->
+</td>
+</tr>
+</table>
+<!--End the main content table-->
+
+<br />
+<!--Begin the bottom logo table-->
+<!--TIP: this data should match the data used by the BOTLOGO web option-->
+<span class="mobilehide">
+
+
+<br />
+<!-- begin jpll footer -->
+<div class="jpllnav" style="padding:4px 22px 4px 22px;">
+<span class="fright"><a href="http://www.library.sfsu.edu/docs/micro.php">Microform Request</a>
+&#160;|&#160;<a href="http://www.library.sfsu.edu/find/dbs/dbselector.php">Databases</a>
+&#160;|&#160;<a href="http://library.sfsu.edu/redirect/eres.php">EReserves</a>
+&#160;|&#160;<a href="http://illiad.sfsu.edu/illiad/logon.html">ILLiad</a>
+&#160;|&#160;<a href="http://csul.iii.com/">LINK+</a>
+</span><span class="fleft"><a href="/search/">New Search</a>
+&#160;|&#160;<a href="/patroninfo">Library Account</a>
+&#160;|&#160;<a href="/acquire">Suggest a Purchase</a>
+&#160;|&#160;<a href="http://www.library.sfsu.edu/about/staff/staffselector.php?qGuide=Y">Quick Contacts</a>
+&#160;|&#160;<a href="/screens/help_index.html">Help</a></span>
+</div>
+<div id="footerstripe"><div id="footerbox"><a href="http://www.sfsu.edu"><img src="http://www.library.sfsu.edu/images/sfsu/logo.gif" alt="SF State Home" width="360" height="50" style="margin-left:12px;"/></a>
+<div style="float:right;text-align:right;padding-right:2em;padding-top:1em;font-size:75%;"><a href="http://www.library.sfsu.edu">J. Paul Leonard Library</a>, 1630 Holloway Avenue, San Francisco, CA  94132 &#8212; 415.338.1854 &#8212; libweb@sfsu.edu</div>
+</div>
+</div>
+<!-- end jpll footer -->
+<div style="display:none;">
+
+</span>
+<script type="text/javascript">
+mobiletrue();
+</script>
+
+<!--End the bottom logo table--> 
+<p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative Interfaces, Inc.</a> 2003</p>
+</body>
+</html>
+<!--this is customized <screens/pverify2_web.html>-->
